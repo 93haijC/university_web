@@ -1,0 +1,15 @@
+http://blog.jobbole.com/25775/ ————> A blog explains how git works in detail.
+
+A simple git workflew:
+
+** git clone [your repository(The url)] **
+
+Go in to the folder, make some changes.
+
+** git add [something.*] **
+
+** git commit -m [message] **
+
+** git push [repo url] [branch] **
+or
+** git push --all **
