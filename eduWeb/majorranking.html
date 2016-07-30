@@ -9,40 +9,37 @@
         <div>
             <form class="form-inline">
                         <label>Degree : </label>
-                        <select class="form-control" style="width:15%;">
-                            <option value="volvo">Undergraduate</option>
-                            <option value="saab">Graduate Schools</option>
+                        <select class="form-control" style="width:15%;" id="degree">
+                            <option value="Undergraduate">Undergraduate</option>
+                            <option value="Graduate Schools">Graduate Schools</option>
                         </select>
                         <label> Program : </label>
-                        <select class="form-control" style="width:16%;">
-                            <option value="volvo">Engineering</option>
-                            <option value="saab">Computer Science</option>
-                            <option value="opel">Financial</option>
-                            <option value="audi">Law</option>
-                            <option value="audi">Education</option>
-                            <option value="audi">Art</option>
-                            <option value="audi">Law</option>
-                            <option value="audi">Economics</option>
-                            <option value="audi">Medicine</option>
-                            <option value="audi">Math</option>
-                            <option value="audi">Nursing</option>
-                            <option value="audi">Physics</option>
-                            <option value="audi">Biological Science</option>
-                            <option value="audi">Nursing</option>
-                            <option value="audi">Chemistry</option>
-                            <option value="audi">Geoscience</option>
-                            <option value="audi">Social Science</option>
+                        <select class="form-control" style="width:16%;" id="major">
+                            <option value="Engineering">Engineering</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Financial">Financial</option>
+                            <option value="Law">Law</option>
+                            <option value="Education">Education</option>
+                            <option value="Art">Art</option>
+                            <option value="Law">Law</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Math">Math</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Biological Science">Biological Science</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Geoscience">Geoscience</option>
+                            <option value="Social Science">Social Science</option>
                         </select>
-                        <button class="btn btn-primary" style="margin-left:8px  ">search</button>
+                        <button class="btn btn-primary" style="margin-left:8px" ng-click="model.getRank();">search</button>
             </form>
         </div>
 
-
-
-      <!-- Tab panes -->
-      <div class="tab-content">
+        <div class="tab-content" id="firstpage">
             <table class="table table-striped">
-                <tr>
+                <tr ng-repeat="school in model.frontpage">
                     <td class="col-xs-1">
                         1
                     </td>
@@ -50,55 +47,32 @@
                         <img src="image/neu.png" style="height:25px">
                     </td>
                     <td class="col-xs-5">
-                        <a>Princeton University</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-xs-1">
-                        2
-                    </td>
-                    <td class="col-xs-4">
-                        <img src="image/neu.png" style="height:25px">
-                    </td>
-                    <td class="col-xs-5">
-                        <a>Harvard University</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-xs-1">
-                        3
-                    </td>
-                    <td class="col-xs-4">
-                        <img src="image/neu.png" style="height:25px">
-                    </td>
-                    <td class="col-xs-5">
-                        <a>Yale University</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-xs-1">
-                        4
-                    </td>
-                    <td class="col-xs-4">
-                        <img src="image/neu.png" style="height:25px">
-                    </td>
-                    <td class="col-xs-5">
-                        <a>Columbia University</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-xs-1">
-                        4
-                    </td>
-                    <td class="col-xs-4">
-                        <img src="image/neu.png" style="height:25px">
-                    </td>
-                    <td class="col-xs-5">
-                        <a>Stanford University</a>
+                        <a>{{school}}</a>
                     </td>
                 </tr>
             </table>
         </div>
+
+      <!-- Tab panes -->
+      <div class="tab-content" style="">
+            <table class="table table-striped">
+                <tr ng-repeat="school in model.mrank">
+                    <td class="col-xs-1">
+                        1
+                    </td>
+                    <td class="col-xs-4">
+                        <img src="image/neu.png" style="height:25px">
+                    </td>
+                    <td class="col-xs-5">
+                        <a>{{school}}</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
        
 
 
