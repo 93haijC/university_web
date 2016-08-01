@@ -14,30 +14,30 @@
     <head-info>
         <div class="col-xs-10 col-xs-offset-1" style="border:1px solid #F5F5F5;height:200px;padding-top:30px">
             <div style="float:left;width:200px;margin-left:30px;">
-                <img src="image/ufl.png" style="width:140px;">
+                <img ng-src="{{model.image}}" style="width:140px;">
              </div>
              <div style="float:left">
                 <table>
                     <tr>
                         <td>
-                            <p class="allerta" style="margin-top:0px;margin-bottom:15px;"><b>University of Florida</b></p>
+                            <p class="allerta" style="margin-top:0px;margin-bottom:15px;"><b>{{model.name}}</b></p>
                         </td>
                     </tr>
                      <tr>
                         <td>
-                            <p class="allerta" style="margin-top:0px;margin-bottom:14px;font-size:17px">Location: <a>Gainesville,FL
+                            <p class="allerta" style="margin-top:0px;margin-bottom:14px;font-size:17px">Location: <a>{{model.loc}}
                                 <span class="glyphicon glyphicon-map-marker"></a></span>
                             </p>
                         </td>
                     </tr>
                     <tr>
                         <td style="height:30px">
-                            <a class="allerta" style="margin-top:0px;margin-bottom:17px;font-size:20px">ufl.edu</a>
+                            <a class="allerta" style="margin-top:0px;margin-bottom:17px;font-size:20px">{{model.web}}</a>
                         </td>
                     </tr>
                     <tr>
                         <td style="height:35px">
-                            <a class="allerta" style="font-size:17px;margin-top:15px;">Nation Universities Rankings: 47</a>
+                            <a class="allerta" style="font-size:17px;margin-top:15px;">Nation Universities Rankings: {{model.rank}}</a>
                         </td>
                     </tr>
                 </table>
@@ -59,11 +59,7 @@
     <div class="col-xs-10">
         <uib-tabset class="allerta" active="active">
             <uib-tab index="0" heading="Overview">
-                University of Florida is a public institution that was founded in 1853. It has a total undergraduate enrollment of 33,720, its setting is suburban, and the campus size is 2,000 acres. It utilizes a semester-based academic calendar. University of Florida's ranking in the 2016 edition of Best Colleges is National Universities, 47. Its in-state tuition and fees are $6,313 (2014-15); out-of-state tuition and fees are $28,591 (2014-15).
-
-            The University of Florida is about two miles away from downtown Gainesville, a college town bolstered by the school’s nearly 50,000 students. The Florida Gators sports teams compete in the NCAA Division I Southeastern Conference, and are supported by mascots Albert and Alberta the Alligators. The Gator football team, which competes in Ben Hill Griffin Stadium — commonly called the "The Swamp" — is particularly notorious. The team became the namesake of popular sports drink Gatorade in 1966, after freshmen Gators experimented with the novel beverage. The annual Gator Growl, held each Homecoming weekend, has been called the largest student-run pep rally in the world. About 15 percent of students are involved in the school’s 60-plus fraternities and sororities. Freshmen do not have to live on campus, though about 80 percent opt to do so. All students can partake in Gator Nights, held every Friday, which offer free late-night entertainment and a free “midnight breakfast.”
-
-            The school has well-regarded graduate programs through the engineering school, Hough Graduate School of Business, Levin College of Law and the College of Medicine. The university is also integrated with retirement community Oak Hammock, where students can work, complete internships in health sciences and find mentors. Famous graduates of the University of Florida include home repair television sensation Bob Vila, Heisman Trophy winner Steve Spurrier and former U.S. Sens. Bob Graham and Connie Mack.
+                {{model.overview}}
             </uib-tab>
             <uib-tab index="1" heading="Applying">
                 <table class="table table-striped">
@@ -77,7 +73,7 @@
                         Application deadline
                     </td>
                     <td>
-                        <b>November 1</b>
+                        <b>{{model.applyddl}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -85,7 +81,7 @@
                         Early Decision deadline
                     </td>
                     <td>
-                        <b>N/A</b>
+                        <b>{{model.edddl}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -93,7 +89,7 @@
                         Application Fee
                     </td>
                     <td>
-                        <b>$30</b>
+                        <b>{{model.applyfee}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -101,7 +97,7 @@
                         Common Application Accepted
                     </td>
                     <td>
-                        <b>No</b>
+                        <b>{{model.caa}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -109,7 +105,7 @@
                         SAT/ACT scores must be received by 
                     </td>
                     <td>
-                        <b>December 31</b>
+                        <b>{{model.satddl}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -117,7 +113,7 @@
                         Acceptance Rate
                     </td>
                     <td>
-                        <b>47%</b>
+                        <b>{{model.acptrate}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -130,7 +126,7 @@
                         Toefl
                     </td>
                     <td>
-                        <b>80</b>
+                        <b>{{model.toefl}}</b>
                     </td>
                      <td>
                         IELTS
@@ -138,7 +134,7 @@
                     <td>
                     </td>
                     <td>
-                        <b>6</b>
+                        <b>{{model.ielts}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -146,25 +142,25 @@
                         SAT scores
                     </td>
                     <td>
-                        <b>1780-2040</b>
+                        <b>{{model.sat}}</b>
                     </td>
                      <td>
                         SAT critical Reading
                     </td>
                     <td>
-                        <b>570-670</b>
+                        <b>{{model.reading}}</b>
                     </td>
                     <td>
                         SAT Math
                     </td>
                     <td>
-                        <b>590-690</b>
+                        <b>{{model.math}}</b>
                     </td>
                     <td>
                         SAT Writing
                     </td>
                     <td>
-                        <b>590-680</b>
+                        <b>{{model.writing}}</b>
                     </td>
                 </tr>
                 </table>
@@ -176,7 +172,7 @@
                         Graduation Rate
                     </td>
                     <td>
-                        <b>86%</b>
+                        <b>{{model.gradrate}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -184,7 +180,7 @@
                         Class Fewer than 20 students
                     </td>
                     <td>
-                        <b>49.1%</b>
+                        <b>{{model.twentyless}}</b>
                     </td>
                 </tr>
                  <tr>
@@ -192,7 +188,7 @@
                         Class Larger than 50 students
                     </td>
                     <td>
-                        <b>16.1%</b>
+                        <b>{{model.fiftymore}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -205,13 +201,13 @@
                        White
                     </td>
                     <td>
-                        <b>58%</b>
+                        <b>{{model.white}}</b>
                     </td>
                     <td class="col-xs-3">
                        Hispanic
                     </td>
                     <td>
-                        <b>19%</b>
+                        <b>{{model.hispanic}}</b>
                     </td>
                 </tr>
                  <tr>
@@ -219,13 +215,13 @@
                        Asian
                     </td>
                     <td>
-                        <b>8%</b>
+                        <b>{{model.asian}}</b>
                     </td>
                     <td class="col-xs-3">
                        Black
                     </td>
                     <td>
-                        <b>7%</b>
+                        <b>{{model.black}}</b>
                     </td>
                 </tr>
                  <tr>
@@ -233,13 +229,13 @@
                        Two or more races
                     </td>
                     <td>
-                        <b>3%</b>
+                        <b>{{model.twomore}}</b>
                     </td>
                     <td class="col-xs-3">
                        Unknown
                     </td>
                     <td>
-                        <b>3%</b>
+                        <b>{{model.unknown}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -247,7 +243,7 @@
                         International Ratio
                     </td>
                     <td>
-                        <b>1.73%</b>
+                        <b>{{model.interate}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -260,7 +256,7 @@
                         Total undergraduate enrollment
                     </td>
                     <td>
-                        <b>33720</b>
+                        <b>{{model.underenroll}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -268,7 +264,7 @@
                         Total graduate enrollment
                     </td>
                     <td>
-                        <b>16630</b>
+                        <b>{{model.gradenroll}}</b>
                     </td>
                 </tr>
                 <tr>
@@ -281,13 +277,13 @@
                         Male
                     </td>
                     <td>
-                        <b>45%</b>
+                        <b>{{model.male}}</b>
                     </td>
                     <td class="col-xs-3">
                         Female
                     </td>
                     <td>
-                        <b>55%</b>
+                        <b>{{model.female}}</b>
                     </td>
                 </tr>
             </table>
@@ -299,24 +295,24 @@
                 </tr>
                 <tr>
                     <td>Tuition and fees</td>
-                    <td><b>$34904</b></td>
+                    <td><b>{{model.tuifee}}</b></td>
                     <td>Room and board</td>
-                    <td><b>$9630</b></td>
+                    <td><b>{{model.roomboard}}</b></td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td><b>$44534<b></td>
+                    <td><b>{{model.total}}<b></td>
                 </tr>
                  <tr>
                     <td><b>Financial aid<b></td>
                 </tr>
                  <tr>
                     <td>International student financial aids</td>
-                    <td><b>Yes<b></td>
+                    <td><b>{{model.interaid}}<b></td>
                 </tr>
                 <tr>
                     <td><b>Salary after attending<b></td>
-                    <td><b>$51300</b></td>
+                    <td><b>{{model.salary}}</b></td>
                 </tr>
 
             </table>
@@ -324,8 +320,8 @@
             <uib-tab index="4" heading="Majors and Rankings">
                 <uib-tabset active="activePill" vertical="true" type="pills">
                     <uib-tab index="0" heading="Undergraduate Majors and Ranking">
-                        <table class="table table-striped">
-                    <thead>
+                    <table class="table table-striped" style="margin:0px;">
+                        <thead>
                         <td class="col-xs-7">
                             <b>Major</b>
                         </td>
@@ -333,44 +329,35 @@
                             <b>Ranking</b>
                         </td>
                     </thead>
-                    <tr>
-                        <td>
-                            <b>Science/Math:</b>
-                        </td>
-                    </tr>
-                     <tr>
-                        <td>
-                            Animal Science
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Astronomy
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Chemistry
-                        </td>
-                        <td>
-                            35
-                        </td>
-                    </tr>
+                    </table>
+                    <table class="table table-striped" ng-repeat="program in model.under" style="margin:0px;">
+                    
+                    
+                            <tr>
+                                <td class="col-xs-7">
+                                    <b>{{program.depart}}</b>
+                                </td>
+                            </tr>
+                             <tr ng-repeat="major in program.major">
+                                <td>
+                                    {{major.major}}
+                                </td>
+                                <td>
+                                    {{major.rank}}
+                                </td>
+                            </tr>
                 </table>
                     </uib-tab>
-                    <uib-tab index="1" heading="Graduate programs">
-                        <table class="table table-striped" style="margin-top:10px">
+                    <uib-tab index="1" heading="Graduate programs" style="margin-bottom:10px">
+                        <table class="table table-striped" style="margin:0px" ng-repeat="program in model.grad">
                             <tr>
                                 <td  class="col-xs-6">
-                                    <b>Business School</b>
+                                    <b>{{program.depart}}</b>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    Master of Accounting
-                                </td>
-                                <td>
-                                    Master of International Business
+                                <td style="col-xs-6" ng-repeat="major in program.major">
+                                    {{major}}
                                 </td>
                             </tr>
                         </table>

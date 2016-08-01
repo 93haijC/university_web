@@ -26,7 +26,7 @@ function mRankController(dataAPI)
 			vm.mrank = res["rank"];
 		})
 	};
-	dataAPI.getRankByMajorDegree("ass","bss",function(res)
+	dataAPI.getRankByMajorDegree(degree,major,function(res)
 		{
 			vm.frontpage = res["rank"];
 		});

@@ -4,7 +4,8 @@
 	function dataAPI($http)
 	{
 		
-		var api = {"getUsRank":getUsRank,"getRankByMajorDegree":getRankByMajorDegree};
+		var api = {"getUsRank":getUsRank,"getRankByMajorDegree":getRankByMajorDegree,
+		"getSchoolById":getSchoolById};
 		return api;
 
 		function getUsRank(callback)
@@ -17,5 +18,9 @@
 			$http.get("/api/mrank?degree="+degree+"&major="+major).success(callback);
 		}
 
+		function getSchoolById(id,callback)
+		{
+			$http.get("/api/college/:id").success(callback);
+		}
 	}
 })();

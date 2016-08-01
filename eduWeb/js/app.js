@@ -8,5 +8,5 @@ function Config($routeProvider)
 		when("/",{templateUrl:"homepage.html"})
 		.when("/crank",{templateUrl:"ranking.html",controller:"cRankController",controllerAs:"model"})
 		.when("/mrank",{templateUrl:"majorranking.html",controller:"mRankController",controllerAs:"model"})
-		.when("/college/:uid",{templateUrl:"school.html"});
+		.when("/college/:uid",{templateUrl:"school.html",controller:"schoolController",controllerAs:"model"});
 }
