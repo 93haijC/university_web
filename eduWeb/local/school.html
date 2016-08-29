@@ -1,0 +1,381 @@
+    <head>
+        <style>
+            table tr {
+
+                font-family: 'Crimson Text', Georgia, Times, serif;
+                font-size: 16px;
+                line-height: 25px;
+                margin-top:35px;
+                margin-bottom: 35px;
+            }
+        </style>
+    </head>
+    <div class="row">
+    <head-info>
+        <div class="col-xs-10 col-xs-offset-1" style="border:1px solid #F5F5F5;height:200px;padding-top:30px">
+            <div style="float:left;width:200px;margin-left:30px;">
+                <img ng-src="{{model.image}}" style="width:140px;">
+             </div>
+             <div style="float:left">
+                <table>
+                    <tr>
+                        <td>
+                            <p class="allerta" style="margin-top:0px;margin-bottom:15px;"><b>{{model.name}}</b></p>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <p class="allerta" style="margin-top:0px;margin-bottom:14px;font-size:17px">Location: <a>{{model.loc}}
+                                <span class="glyphicon glyphicon-map-marker"></a></span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:30px">
+                            <a class="allerta" style="margin-top:0px;margin-bottom:17px;font-size:20px">{{model.web}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height:35px">
+                            <a class="allerta" style="font-size:17px;margin-top:15px;">National Universities Rankings: {{model.rank}}</a>
+                        </td>
+                    </tr>
+                </table>
+             </div>
+             <div style="float:left;width:210px;height:140px;background-color:#F5F5F5;margin-left:30px;">
+                <p class="allerta">Map API</p>
+             </div>
+               <div style="float:left;width:210px;height:140px;background-color:#F5F5F5;margin-left:30px;">
+                <p class="allerta">Photo Gallery</p>
+             </div>
+        </div>
+        </div>
+    </head-info>
+</div>
+
+<div class="row" style="margin-top:30px;">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-10">
+        <uib-tabset class="allerta" active="active">
+            <uib-tab index="0" heading="Overview">
+                {{model.overview}}
+            </uib-tab>
+            <uib-tab index="1" heading="Applying">
+                <table class="table table-striped">
+                <tr>
+                    <td class="col-xs-3"  style="background-color:grey;">
+                        <b>Basic Information</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Application deadline
+                    </td>
+                    <td>
+                        <b>{{model.applyddl}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Early Decision deadline
+                    </td>
+                    <td>
+                        <b>{{model.edddl}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Application Fee
+                    </td>
+                    <td>
+                        <b>{{model.applyfee}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Common Application Accepted
+                    </td>
+                    <td>
+                        <b>{{model.caa}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        SAT/ACT scores must be received by 
+                    </td>
+                    <td>
+                        <b>{{model.satddl}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Acceptance Rate
+                    </td>
+                    <td>
+                        <b>{{model.acptrate}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:grey;">
+                        <b>Tests Requirement</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Toefl
+                    </td>
+                    <td>
+                        <b>{{model.toefl}}</b>
+                    </td>
+                     <td>
+                        IELTS
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <b>{{model.ielts}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        SAT scores
+                    </td>
+                    <td>
+                        <b>{{model.sat}}</b>
+                    </td>
+                     <td>
+                        SAT critical Reading
+                    </td>
+                    <td>
+                        <b>{{model.reading}}</b>
+                    </td>
+                    <td>
+                        SAT Math
+                    </td>
+                    <td>
+                        <b>{{model.math}}</b>
+                    </td>
+                    <td>
+                        SAT Writing
+                    </td>
+                    <td>
+                        <b>{{model.writing}}</b>
+                    </td>
+                </tr>
+                </table>
+            </uib-tab>
+            <uib-tab index="2" heading="Student Life">
+                <table class="table table-striped">
+                <tr>
+                    <td class="col-xs-3">
+                        Graduation Rate
+                    </td>
+                    <td>
+                        <b>{{model.gradrate}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Class Fewer than 20 students
+                    </td>
+                    <td>
+                        <b>{{model.twentyless}}</b>
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="col-xs-3">
+                        Class Larger than 50 students
+                    </td>
+                    <td>
+                        <b>{{model.fiftymore}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                       <b>Race/Ethic</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                       White
+                    </td>
+                    <td>
+                        <b>{{model.white}}</b>
+                    </td>
+                    <td class="col-xs-3">
+                       Hispanic
+                    </td>
+                    <td>
+                        <b>{{model.hispanic}}</b>
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="col-xs-3">
+                       Asian
+                    </td>
+                    <td>
+                        <b>{{model.asian}}</b>
+                    </td>
+                    <td class="col-xs-3">
+                       Black
+                    </td>
+                    <td>
+                        <b>{{model.black}}</b>
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="col-xs-3">
+                       Two or more races
+                    </td>
+                    <td>
+                        <b>{{model.twomore}}</b>
+                    </td>
+                    <td class="col-xs-3">
+                       Unknown
+                    </td>
+                    <td>
+                        <b>{{model.unknown}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        International Ratio
+                    </td>
+                    <td>
+                        <b>{{model.interate}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                       <b>Total enrollment</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Total undergraduate enrollment
+                    </td>
+                    <td>
+                        <b>{{model.underenroll}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Total graduate enrollment
+                    </td>
+                    <td>
+                        <b>{{model.gradenroll}}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        <b>Gender distribution</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-3">
+                        Male
+                    </td>
+                    <td>
+                        <b>{{model.male}}</b>
+                    </td>
+                    <td class="col-xs-3">
+                        Female
+                    </td>
+                    <td>
+                        <b>{{model.female}}</b>
+                    </td>
+                </tr>
+            </table>
+            </uib-tab>
+            <uib-tab index="3" heading="Cost and salary anticipation">
+              <table class="table table-striped">
+                <tr>
+                    <td><b>Annual Cost<b></td>
+                </tr>
+                <tr>
+                    <td>Tuition and fees</td>
+                    <td><b>{{model.tuifee}}</b></td>
+                    <td>Room and board</td>
+                    <td><b>{{model.roomboard}}</b></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><b>{{model.total}}<b></td>
+                </tr>
+                 <tr>
+                    <td><b>Financial aid<b></td>
+                </tr>
+                 <tr>
+                    <td>International student financial aids</td>
+                    <td><b>{{model.interaid}}<b></td>
+                </tr>
+                <tr>
+                    <td><b>Salary after attending<b></td>
+                    <td><b>{{model.salary}}</b></td>
+                </tr>
+
+            </table>
+            </uib-tab>
+            <uib-tab index="4" heading="Majors and Rankings">
+                <uib-tabset active="activePill" vertical="true" type="pills">
+                    <uib-tab index="0" heading="Undergraduate Majors and Ranking">
+                    <table class="table table-striped" style="margin:0px;">
+                        <thead>
+                        <td class="col-xs-7">
+                            <b>Major</b>
+                        </td>
+                        <td>
+                            <b>Ranking</b>
+                        </td>
+                    </thead>
+                    </table>
+                    <table class="table table-striped" ng-repeat="program in model.under" style="margin:0px;">
+                    
+                    
+                            <tr>
+                                <td class="col-xs-7">
+                                    <b>{{program.depart}}</b>
+                                </td>
+                            </tr>
+                             <tr ng-repeat="major in program.major">
+                                <td>
+                                    {{major.major}}
+                                </td>
+                                <td>
+                                    {{major.rank}}
+                                </td>
+                            </tr>
+                </table>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Graduate programs" style="margin-bottom:10px">
+                        <table class="table table-striped" style="margin:0px" ng-repeat="program in model.grad">
+                            <tr>
+                                <td  class="col-xs-6">
+                                    <b>{{program.depart}}</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="col-xs-6" ng-repeat="major in program.major">
+                                    {{major}}
+                                </td>
+                            </tr>
+                        </table>
+                        ...
+                    </uib-tab>
+                </uib-tabset>
+            </uib-tab>
+         </uid-tabset>
+
+            
+
+       
+          
+
+
+        <!-- Majors and Programs-->
+   
+        </div>
+
+    </div>
+</div>
