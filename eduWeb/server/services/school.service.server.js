@@ -86,7 +86,11 @@ module.exports = function (app,models) {
     app.get("/api/college/:id", getschoolbyId);
     app.get("/api/mrank/:degree/:major", getmrank);
     app.get("/api/us", getusnews);
+    app.post("/local/school.json",function(req,res){
+        res.send(req.body.school);
+    })
 
+    
 
 
 

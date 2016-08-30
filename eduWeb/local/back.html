@@ -1,0 +1,26 @@
+<html lang="en" ng-app="eduadmin">
+	<head>
+		<title>Admin Page</title>
+		<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    	<script src="../js/admin.controller.js"></script>
+
+	</head>
+
+	<body ng-controller="adminController">
+		<form>
+			<input type="file" onchange="angular.element(this).scope().filesChanged(this)" id="data" accept="application/json"/>
+			<button ng-click="upload()">upload and show</button>
+			<br/>
+		</form>
+		<table  ng-repeat="school in schools">
+			<tr>
+				<td><input type="checkbox"></input>{{school.id}}</td>
+				<td>{{school.school}}</td>
+			</tr>
+		<table>
+		<br>
+		<button>Upload into database</button>
+	</body>
+</html>
