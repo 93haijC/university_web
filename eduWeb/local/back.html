@@ -4,23 +4,35 @@
 		<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>	
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    	<script src="../js/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+		<script src="../js/ng-file-upload.min.js"></script>
     	<script src="../js/admin.controller.js"></script>
+    	
 
 	</head>
 
 	<body ng-controller="adminController">
+		
 		<form>
-			<input type="file" onchange="angular.element(this).scope().filesChanged(this)" id="data" accept="application/json"/>
-			<button ng-click="upload()">upload and show</button>
+			<input type="file" ngf-select ng-model="jsonfile"
+          accept="application/json" ngf-max-height="1000" ngf-max-size="1MB"></input>
+          	<br/>
+			<button ng-click="uploadData(jsonfile)">upload and show</button>
 			<br/>
 		</form>
-		<table  ng-repeat="school in schools">
-			<tr>
-				<td><input type="checkbox"></input>{{school.id}}</td>
-				<td>{{school.school}}</td>
+		<table>
+			<thead>
+				<tr>
+					<td> </td>
+					<td ng-repeat="key in keys">{{key}}</td>
+				</tr>
+			</thead>
+			<tr ng-repeat="json in jsondata">
+				<td><input type="checkbox"/></td>
+				<td ng-repeat="key in keys">{{json[key]}}</td>
 			</tr>
 		<table>
 		<br>
-		<button>Upload into database</button>
+		<button ng-click="test()">Upload into database</button>
 	</body>
 </html>

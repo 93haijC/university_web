@@ -86,10 +86,45 @@ module.exports = function (app,models) {
     app.get("/api/college/:id", getschoolbyId);
     app.get("/api/mrank/:degree/:major", getmrank);
     app.get("/api/us", getusnews);
-    app.post("/local/school.json",function(req,res){
-        res.send(req.body.school);
-    })
 
+    var fs = require('fs');
+    var multer = require('multer');
+    multiparty = require('connect-multiparty');
+    multipartyMiddleware = multiparty();
+    var storage = multer.diskStorage({ //multers disk storage settings
+        destination: function (req, file, cb) {
+            cb(null, './uploads/');
+        },
+        filename: function (req, file, cb) {
+            var datetimestamp = Date.now();
+            cb(null, file.fieldname + '-' + datetimestamp + '.' + file.originalname.split('.')[file.originalname.split('.').length -1]);
+        }
+    });
+
+    var upload = multer({ //multer settings
+                    storage: storage
+                }).single('file');
+
+    app.post('/upload', function(req, res) {
+        upload(req,res,function(err){
+            if(err){
+                 res.json(err);
+                 return;
+            }
+            fs.readFile(req.file.path,'utf-8',function(err,data)
+                {
+                    if(err)
+                    {
+                        console.log(err)
+                    }
+                    else
+                    {
+                        var curjson = JSON.parse(data);
+                        res.json(curjson);
+                    }
+                });    
+        });
+    });
     
 
 
