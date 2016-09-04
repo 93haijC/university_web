@@ -1,0 +1,55 @@
+<html lang="en" ng-app="eduadmin">
+	<head>
+		<title>Admin Page</title>
+		<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    	<script src="../js/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+		<script src="../js/ng-file-upload.min.js"></script>
+		<script src="../js/admin.app.js"></script>
+		<script src="../js/admin.controller.js"></script>
+		<script src="../js/service.admin.js"></script>
+    	<style>
+    		.tablesc { 
+		    overflow: scroll;
+}
+    	</style>
+
+	</head>
+
+	<body>
+		
+         <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="background:grey">
+                    <span class="sr-only">Toggle navigation</span> Haijie Chen <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#/">EDU.data</a>
+                <div style="float:left;background:grey;margin-top:7px;width:2px;height:35px"></div>
+                <div style="float:left;vertical-align:middle;color:grey;margin-top:15px;margin-left:5px"><p>Background Management System</p></div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                	<li class="page-scroll">
+                        <p href="#/" style="margin-top:15px;color:grey">Hi, Haijie Chen</p>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#/">Log out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+		<ng-view></ng-view>
+	</body>
+</html>

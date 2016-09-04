@@ -1,0 +1,36 @@
+		<style>
+			body {
+				padding-top:75px;
+			}
+		</style>
+		<div class="container">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="file name" value="{{jsonfile.name}}"></input>
+			<span class="input-group-btn"><button style="background:grey" class="btn btn-primary" type="file" ngf-select ng-model="jsonfile"
+	          accept="application/json" ngf-max-height="1000" ngf-max-size="1MB">Choose file</button>
+	      <button class="btn btn-primary" style="background:grey" ng-click="uploadData(jsonfile)">upload and show</button></span>
+		</div>
+		<form class="form-inline" style="margin-top:10px">
+				<button class="btn btn-primary" style="background:grey" ng-click="postData()">Upload Selected</button>
+				<span style="margin-left:10px">table select:</span>
+			    	<select id="tableselect" class="form-control"> 
+				      <option>School</option> 
+				      <option>Major</option> 
+				    </select>
+  		</form>
+		<div class="tablesc">
+			<table class="table">
+				<thead>
+				<tr>
+					<td id="selAll"><input type="checkbox" id="all" ng-click="selAll()"/></td>
+					<td name="keys" ng-repeat="key in keys"><b>{{key}}</b></td>
+				</tr>
+			</thead>
+			<tr ng-repeat="json in jsondata">
+				<td><input name="ckboxes" type="checkbox"/></td>
+				<td id="datatable" name="data" ng-repeat="key in keys">{{json[key]}}</td>
+			</tr>
+			
+		<table>
+		</div>
+	</div>

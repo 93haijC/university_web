@@ -1,5 +1,3 @@
-var app = angular.module('eduadmin',['ngFileUpload']);
-
 app.controller("adminController", ['$scope','Upload','$timeout','$http','adminAPI',function($scope,Upload,$timeout,$http,adminAPI)
 {
 	document.getElementById('selAll').style.display = "none";
