@@ -134,7 +134,8 @@ module.exports = function() {
     var api = {
         findSchoolById: findSchoolById,
         findAll: findAll,
-
+        batchupdate: batchupdate,
+        upsearch:upsearch,
     };
     return api;
 
@@ -155,6 +156,58 @@ module.exports = function() {
 
         return deferred.promise;
     }
+
+
+
+
+
+
+    function batchupdate(data) {
+        var deferred = q.defer();
+
+        SchoolModel
+            .create(
+                data,
+                function(err, doc) {
+                    if (err) {
+                        deferred.reject(err);
+                    } else {
+                        deferred.resolve(doc);
+                    }
+                }
+            );
+
+        return deferred.promise;
+    }
+
+
+    function upsearch(key) {
+        var deferred = q.defer();
+
+        SchoolModel
+            .find(
+                {name: key},
+                function(err, doc) {
+                    if (err) {
+                        deferred.reject(err);
+                    } else {
+                        deferred.resolve(doc);
+                    }
+                }
+            );
+
+        return deferred.promise;
+    }
+
+
+
+
+
+
+
+
+
+
 
     function findSchoolById(id) {
         var deferred = q.defer();

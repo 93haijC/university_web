@@ -4,6 +4,11 @@ module.exports = function (app,models) {
 
     var schoolModel = models.schoolModel;
 
+ var school2= [
+        { id: "12", name: "University of Florida",image: "image/ufl.png",loc: "Gainesville,FL",},
+        { id: "13", name: "University of Florida",image: "image/ufl.png",loc: "Gainesville,FL",},
+    ];
+
     var school1= {
         id: "12",
         name: "University of Florida",
@@ -86,6 +91,8 @@ module.exports = function (app,models) {
     app.get("/api/college/:id", getschoolbyId);
     app.get("/api/mrank/:degree/:major", getmrank);
     app.get("/api/us", getusnews);
+    app.post("/api/:table", batchinsert);
+    app.get("/api/search/:keyword", search);
 
     var fs = require('fs');
     var multer = require('multer');
@@ -126,6 +133,37 @@ module.exports = function (app,models) {
         });
     });
     
+
+
+  function batchinsert(req, res) {
+        var data  = req.body;
+        var table = req.params.table;
+        schoolModel
+            .batchupdate(data)
+            .then(
+                function(user) {
+                    res.json(user);
+                },
+                function(err) {
+                    res.status(405).send(err);
+                }
+            );
+    }
+
+
+  function search(req, res) {
+        var key = req.params.keyword;
+        schoolModel
+            .upsearch(key)
+            .then(
+                function(user) {
+                    res.json(user);
+                },
+                function(err) {
+                    res.status(405).send(err);
+                }
+            );
+    }
 
 
 
