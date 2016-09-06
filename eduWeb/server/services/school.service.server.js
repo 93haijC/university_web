@@ -5,8 +5,8 @@ module.exports = function (app,models) {
     var schoolModel = models.schoolModel;
 
  var school2= [
-        { id: "12", name: "University of Florida",image: "image/ufl.png",loc: "Gainesville,FL",},
-        { id: "13", name: "University of Florida",image: "image/ufl.png",loc: "Gainesville,FL",},
+        { id: '12', name: 'University of Florida',image: 'image/ufl.png',loc: 'Gainesville,FL',},
+        { id: '13', name: 'University of Florida',image: 'image/ufl.png',loc: 'Gainesville,FL',},
     ];
 
     var school1= {
@@ -137,7 +137,12 @@ module.exports = function (app,models) {
 
   function batchinsert(req, res) {
         var data  = req.body;
+        // console.log(school1); 
+
+        console.log(data); 
+        // var data1 = JSON.parse(data);
         var table = req.params.table;
+    
         schoolModel
             .batchupdate(data)
             .then(

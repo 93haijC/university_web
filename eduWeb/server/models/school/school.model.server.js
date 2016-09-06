@@ -167,7 +167,7 @@ module.exports = function() {
 
         SchoolModel
             .create(
-                data,
+                JSON.parse(data),
                 function(err, doc) {
                     if (err) {
                         deferred.reject(err);

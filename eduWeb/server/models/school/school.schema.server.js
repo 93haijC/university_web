@@ -4,7 +4,7 @@ module.exports = function() {
     var SchoolSchema = mongoose.Schema(
         {
             id:String,
-            name: String,
+            school: String,
             usrank:String,
             thenrank:String,
             thewrank:String,
