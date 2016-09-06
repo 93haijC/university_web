@@ -1,0 +1,56 @@
+<html lang="en" ng-app="eduadmin">
+	<head>
+		<title>Admin Page</title>
+		<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    	<script src="../js/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+		<script src="../js/ng-file-upload.min.js"></script>
+		<script src="../js/admin.controller.js"></script>
+		<script src="../js/service.admin.js"></script>
+    	<style>
+    		body {padding:5px;}
+    		.tablesc { 
+		    overflow: scroll;
+}
+    	</style>
+
+	</head>
+
+	<body ng-controller="adminController">
+		<div class="container">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="file name" value="{{jsonfile.name}}"></input>
+			<span class="input-group-btn"><button class="btn btn-primary" type="file" ngf-select ng-model="jsonfile"
+	          accept="application/json" ngf-max-height="1000" ngf-max-size="1MB">Choose file</button>
+	      <button class="btn btn-primary" ng-click="uploadData(jsonfile)">upload and show</button></span>
+		</div>
+		<form class="form-inline" style="margin-top:10px">
+				<button class="btn btn-primary" ng-click="postData()">Upload Selected</button>
+				<span style="margin-left:10px">table select:</span>
+			    	<select id="tableselect" class="form-control"> 
+				      <option>School</option> 
+				      <option>Major</option> 
+				    </select>
+  		</form>
+		<div class="tablesc">
+			<table class="table">
+				<thead>
+				<tr>
+					<td id="selAll"><input type="checkbox" id="all" ng-click="selAll()"/></td>
+					<td name="keys" ng-repeat="key in keys"><b>{{key}}</b></td>
+				</tr>
+			</thead>
+			<tr ng-repeat="json in jsondata">
+				<td><input name="ckboxes" type="checkbox"/></td>
+				<td id="datatable" name="data" ng-repeat="key in keys">{{json[key]}}</td>
+			</tr>
+			
+		<table>
+		</div>
+	</div>
+	</body>
+</html>

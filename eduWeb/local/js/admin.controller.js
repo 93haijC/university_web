@@ -60,7 +60,7 @@ app.controller("adminController", ['$scope','Upload','$timeout','$http','adminAP
 			var jsonstr = "{"
 			for(var j = 0;j <keys.length;j++)
 			{
-				jsonstr = jsonstr + $scope.keys[j] +":"+$scope.jsondata[indexSet[i]][$scope.keys[j]];
+				jsonstr = jsonstr +"\""+$scope.keys[j] +"\":\""+$scope.jsondata[indexSet[i]][$scope.keys[j]]+"\"";
 				if(j != keys.length-1)
 				{
 					jsonstr = jsonstr + ","
@@ -71,7 +71,7 @@ app.controller("adminController", ['$scope','Upload','$timeout','$http','adminAP
 				}
 			}
 			jsonstr = jsonstr + "}"
-			datapost.push(jsonstr);
+			datapost.push(JSON.parse(jsonstr));
 		}
 		var table = document.getElementById("tableselect").value;
 		adminAPI.postData(table,datapost,function(){
