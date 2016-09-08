@@ -96,11 +96,11 @@ module.exports = function() {
     function upsearch(key,table) {
         var deferred = q.defer();
 
-        if (key == "SChool"){
+        if (table == "School"){
 
         SchoolModel
             .find(
-                {name: key},
+                {school: key},
                 function(err, doc) {
                     if (err) {
                         deferred.reject(err);

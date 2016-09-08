@@ -7,7 +7,7 @@ function updateController($scope,$http,adminAPI)
 		var keyword = document.getElementById("keyword").value;
 		var table = document.getElementById("tableselect").value;
 		adminAPI.searchResult(keyword,table,function(data){
-			console.log(data);
+			console.log(JSON.stringify(data));
 		});
 	}
 }
