@@ -3,6 +3,10 @@ module.exports = function() {
 
     var SchoolSchema = mongoose.Schema(
         {
+
+            major:String,
+            degree:String,
+            rank:[],
             id:String,
             school: String,
             usrank:String,

@@ -61,7 +61,7 @@ module.exports = function (app,models) {
         var table = req.params.table;
     
         schoolModel
-            .batchupdate(data)
+            .batchupdate(table,data)
             .then(
                 function(user) {
                     res.json(user);
@@ -76,8 +76,10 @@ module.exports = function (app,models) {
   function search(req, res) {
         var key = req.params.keyword;
         var table = req.params.table;
+        // res.send(key)
+      
         schoolModel
-            .upsearch(key)
+            .upsearch(key,table)
             .then(
                 function(user) {
                     res.json(user);
@@ -104,14 +106,23 @@ module.exports = function (app,models) {
 
 //majorranking.html
     function getmrank(req, res) {
-        var degree = req.query.degree;
-        var major = req.query.major;
-        res.send(degree);
+        var degree = req.params.degree;
+        var major = req.params.major;
+        schoolModel
+         .getranks (degree,major)
+         .then(
+            function(ranks) {
+                res.json(ranks);
+            },
+            function(err) {
+                res.status(400).send(err);
+            }
+        )
+
     }
 
 
     // function getschoolbyId(req, res) {
-    //     var id = req.params["id"];
     //
     //     schoolModel
     //         .findSchoolByImdbID(id)
