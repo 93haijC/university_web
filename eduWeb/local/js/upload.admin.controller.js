@@ -1,4 +1,4 @@
-app.controller("adminController", ['$scope','Upload','$timeout','$http','adminAPI',function($scope,Upload,$timeout,$http,adminAPI)
+app.controller("uploadController", ['$scope','Upload','$timeout','$http','adminAPI',function($scope,Upload,$timeout,$http,adminAPI)
 {
 	document.getElementById('selAll').style.display = "none";
 	$scope.uploadData = function(file)

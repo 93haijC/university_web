@@ -8,13 +8,13 @@
 	<div class="container">
 		<form class="form-inline">
 			Keywords:
-			<input type="text" class="form-control" style="width:500px" placeholder="school name, location, major name..."></input>
+			<input type="text" id="keyword" class="form-control" style="width:500px" placeholder="school name, location, major name..."></input>
 			in table
 			<select id="tableselect" class="form-control"> 
 				      <option>School</option> 
 				      <option>Major</option> 
 			</select>
 
-			<button class="btn btn-default"><span class='glyphicon glyphicon-search' style="margin-right:5px"></span>Search</button>
+			<button class="btn btn-default" ng-click="searchData()"><span class='glyphicon glyphicon-search' style="margin-right:5px"></span>Search</button>
 		</form>
 	</div>

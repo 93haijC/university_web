@@ -6,6 +6,6 @@ function Config($routeProvider)
 {
 	$routeProvider.
 		when("/",{templateUrl:"../admin/back.html"})
-		.when("/upload",{templateUrl:"../admin/upload.html",controller:"adminController"})
-		.when("/update",{templateUrl:"../admin/update.html"})
+		.when("/upload",{templateUrl:"../admin/upload.html",controller:"uploadController"})
+		.when("/update",{templateUrl:"../admin/update.html",controller:"updateController"})
 }
