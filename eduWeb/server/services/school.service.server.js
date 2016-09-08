@@ -76,17 +76,16 @@ module.exports = function (app,models) {
   function search(req, res) {
         var key = req.params.keyword;
         var table = req.params.table;
-        res.send(key)
-    //     schoolModel
-    //         .upsearch(key)
-    //         .then(
-    //             function(user) {
-    //                 res.json(user);
-    //             },
-    //             function(err) {
-    //                 res.status(405).send(err);
-    //             }
-    //         );
+        schoolModel
+            .upsearch(key)
+            .then(
+                function(user) {
+                    res.json(user);
+                },
+                function(err) {
+                    res.status(405).send(err);
+                }
+            );
     }
 
 

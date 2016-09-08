@@ -9,11 +9,11 @@
 
 		function postData(table,data,callback)
 		{
-			$http.post("/api/:table",data).success(callback);
+			$http.post("/api/"+table,data).success(callback);
 		}
 		function searchResult(keyword,table,callback)
 		{
-			$http.get("/api/search/:keyword/:table").success(callback);
+			$http.get("/api/search/"+keyword+"/"+table).success(callback);
 		}
 	}
 })();
