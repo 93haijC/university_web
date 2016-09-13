@@ -1,3 +1,5 @@
 # university_project
 
-upload test.
+The web contents are in the eduWeb folder.
+
+zinch
