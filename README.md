@@ -1,5 +1,6 @@
 # university_project
 
-The web contents are in the eduWeb folder.
+eduWeb -- contains the main web contents
 
-zinch
+zinchdatacrawling -- Ipython notebook crawling data from zinch.com
+
