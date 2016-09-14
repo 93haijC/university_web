@@ -14,7 +14,24 @@
 				      <option>School</option> 
 				      <option>Major</option> 
 			</select>
-
 			<button class="btn btn-default" ng-click="searchData()"><span class='glyphicon glyphicon-search' style="margin-right:5px"></span>Search</button>
 		</form>
+		<p>{{noresAlert}}</p>
+
+			<table id="restable" style="display:none" class="table">
+				<thead>
+					<th id="selAll"><input type="checkbox" id="all" ng-click="selAll()"/></th>
+					<th  ng-repeat="key in keys">{{key}}</th>
+				</thead>
+				<tr>
+					<td><input name="ckboxes" type="checkbox"/></td>
+					<td ng-repeat="json in jsondata"><input name="info" type="text" value="{{json}}" readonly="true"></input></td>
+				</tr>
+			</table>
+			<div id="buttonset" style="display:none">
+				<button style="margin:4px" class="btn btn-primary pull-left" ng-click="editData()">Edit</button>
+				<button style="margin:4px" class="btn btn-success pull-left" ng-click="updateData()">Update</button>
+				<button style="margin:4px" class="btn btn-danger pull-left" ng-click="deleteData()">Delete</button>
+			</div>
 	</div>
+
