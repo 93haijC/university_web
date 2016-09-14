@@ -1,3 +1,6 @@
 # university_project
 
-upload test.
+eduWeb -- contains the main web contents
+
+zinchdatacrawling -- Ipython notebook crawling data from zinch.com
+
