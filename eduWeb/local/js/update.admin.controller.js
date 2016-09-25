@@ -103,7 +103,7 @@ function updateController($scope,$http,adminAPI)
 		 	keysToDelete.push($scope.jsondata[0]);
 		}
 		adminAPI.deleteData($scope.currentTable,keysToDelete,function(){
-			
+
 		});
 	}
 }

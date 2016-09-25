@@ -3,24 +3,39 @@ app.controller("uploadController", ['$scope','Upload','$timeout','$http','adminA
 	document.getElementById('selAll').style.display = "none";
 	$scope.uploadData = function(file)
 	{
-		file.upload = Upload.upload({
-		     url: 'http://localhost:3000/upload',
-		     method:'POST',
-		     data:{file: file}
-	    	});
+		if(file!=null)
+		{
+			file.upload = Upload.upload({
+			     url: 'http://localhost:3000/upload',
+			     method:'POST',
+			     data:{file: file}
+		    	});
 
-		file.upload.then(function(response) {
-        	$timeout(function() {
-        		$scope.jsondata = response.data;
-        		$scope.keys = Object.keys($scope.jsondata["0"]);
-        		document.getElementById('selAll').style.display = "block";
-       		});
-      }, function(response) {
-        if (response.status > 0)
-          $scope.errorMsg = response.status + ': ' + response.data;
-      }, 
-      function(evt) {
-      });
+			file.upload.then(function(response) {
+	        	$timeout(function() {
+	        		
+	        		if(response.data["0"]==undefined)
+	        		{
+	        			alert("json file format invalid");
+	        		}
+	        		else
+	        		{
+	        			$scope.jsondata = response.data;
+		        		$scope.keys = Object.keys($scope.jsondata[0]);
+		        		document.getElementById('selAll').style.display = "block";
+		        	}
+	       		});
+		      }, function(response) {
+		        if (response.status > 0)
+		          $scope.errorMsg = response.status + ': ' + response.data;
+		      }, 
+		      function(evt) {
+		      });
+		}
+		else
+		{
+			alert("No file is chosen!");
+		}
 	}
 
 	$scope.selAll = function(){
@@ -74,8 +89,15 @@ app.controller("uploadController", ['$scope','Upload','$timeout','$http','adminA
 			datapost.push(JSON.parse(jsonstr));
 		}
 		var table = document.getElementById("tableselect").value;
-		adminAPI.postData(table,datapost,function(){
-
+		adminAPI.postData(table,datapost,function(res){
+			if(typeof res == "object")
+			{
+				alert("Success!")
+			}
+			else
+			{
+				alert("No data chosen or uploading failed!")
+			}
 		});
 
 	}
