@@ -20,10 +20,18 @@ module.exports = function() {
         batchupdate: batchupdate,
         upsearch:upsearch,
         getranks: getranks,
+        deletecollection: deletecollection,
     };
     return api;
 
-    function findAll() {
+
+
+
+      function deletecollection(did) {
+        return SchoolModel.remove({id: did});
+    }
+
+        function findAll() {
         var deferred = q.defer();
 
         SchoolModel
@@ -66,9 +74,15 @@ module.exports = function() {
         var deferred = q.defer();
 
         if (table == "School"){
-        SchoolModel
-            .create(
-                data,
+
+        for (var i=0 ; i< data.length; i++)
+        {
+         var eid = data[i]["id"]; 
+          console.log(eid);
+          // console.log(data[3]);
+
+         SchoolModel
+               .update({id: eid}, data[i], {upsert: true},
                 function(err, doc) {
                     if (err) {
                         deferred.reject(err);
@@ -76,7 +90,41 @@ module.exports = function() {
                         deferred.resolve(doc);
                     }
                 }
-            );}  else{     
+            );} }
+
+     //      SchoolModel
+     //       // .findOne(
+     //       //      {imdbID: data[i].id},
+     //       //      function(err, doc) {
+     //       //          if (err) {
+     //       //              .creat(data[i])
+     //       //                                  }
+     //       //          if (doc) {
+                         
+     // .create(
+     //            data[i],
+
+
+     //            function(err, doc) {
+     //                if (err) {
+     //                    deferred.reject(err);
+     //                } else {
+     //                    deferred.resolve(doc);
+     //                }
+     //            }
+     //        );} }
+                                       
+        //      .create(
+        //         data,
+        //         function(err, doc) {
+        //             if (err) {
+        //                 deferred.reject(err);
+        //             } else {
+        //                 deferred.resolve(doc);
+        //             }
+        //         }
+            // );}  else{     
+                else{
 
         MajorModel
             .create(

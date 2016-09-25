@@ -10,6 +10,8 @@ module.exports = function (app,models) {
     app.get("/api/us", getusnews);
     app.post("/api/:table", batchinsert);
     app.get("/api/search/:keyword/:table", search);
+    app.delete("/api/delete/:table/:id", deletecollection);
+
 
     var fs = require('fs');
     var multer = require('multer');
@@ -50,6 +52,17 @@ module.exports = function (app,models) {
         });
     });
     
+
+
+       function deletecollection(req, res){
+                var did = req.params.id;
+                schoolModel
+                    .deletecollection(did)
+                    .then(
+                        function(success){res.json(200);},
+                        function(error){res.json(400);}
+                    );
+            }
 
 
   function batchinsert(req, res) {

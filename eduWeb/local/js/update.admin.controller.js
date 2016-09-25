@@ -81,7 +81,7 @@ function updateController($scope,$http,adminAPI)
 			datapost.push(JSON.parse(jsonstr));
 		}
 
-		adminAPI.updateData($scope.currentTable,datapost,function(){
+		adminAPI.postData($scope.currentTable,datapost,function(){
 
 		})
 
