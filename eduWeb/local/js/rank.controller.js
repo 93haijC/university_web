@@ -10,6 +10,7 @@ function cRankController(dataAPI)
 		// vm.therank = res.therank;
 		// vm.qsrank = res.qsrank;
 		vm.ranking = response;
+		
 	});
 }
 

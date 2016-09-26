@@ -5,7 +5,7 @@
 		</style>
 		<div class="container">
 		<div class="input-group">
-			<input type="text" class="form-control" placeholder="file name" value="{{jsonfile.name}}"></input>
+			<input type="text" class="form-control" placeholder="file name" readonly="true" value="{{jsonfile.name}}"></input>
 			<span class="input-group-btn"><button style="background:grey" class="btn btn-primary" type="file" ngf-select ng-model="jsonfile"
 	          accept="application/json" ngf-max-height="1000" ngf-max-size="1MB">Choose file</button>
 	      <button class="btn btn-primary" style="background:grey" ng-click="uploadData(jsonfile)">upload and show</button></span>

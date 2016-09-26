@@ -25,7 +25,7 @@
 				</thead>
 				<tr>
 					<td><input name="ckboxes" type="checkbox"/></td>
-					<td ng-repeat="json in jsondata"><input name="info" type="text" value="{{json}}" readonly="true"></input></td>
+					<td ng-repeat="json in jsondata track by $index"><input name="info" type="text" value="{{json}}" readonly="true"></input></td>
 				</tr>
 			</table>
 			<div id="buttonset" style="display:none">

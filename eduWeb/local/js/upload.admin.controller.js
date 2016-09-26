@@ -89,7 +89,12 @@ app.controller("uploadController", ['$scope','Upload','$timeout','$http','adminA
 			datapost.push(JSON.parse(jsonstr));
 		}
 		var table = document.getElementById("tableselect").value;
+		if(datapost.length == 0)
+		{
+			alert("No data chosen")
+		}
 		adminAPI.postData(table,datapost,function(res){
+
 			if(typeof res == "object")
 			{
 				alert("Success!")

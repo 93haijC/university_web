@@ -28,6 +28,8 @@ function updateController($scope,$http,adminAPI)
 					}
 				}
 			}
+			console.log($scope.keys);
+			console.log($scope.jsondata);
 			console.log(data[0]);
 		});
 		$scope.currentTable = table;
@@ -67,7 +69,7 @@ function updateController($scope,$http,adminAPI)
 			var jsonstr = "{"
 			for(var j = 0;j <$scope.keys.length;j++)
 			{
-				jsonstr = jsonstr +"\""+$scope.keys[j] +"\":\""+$scope.jsondata[j]+"\"";
+				jsonstr = jsonstr +"\""+$scope.keys[j] +"\":\""+document.getElementsByName("info")[j].value+"\"";
 				if(j != $scope.keys.length-1)
 				{
 					jsonstr = jsonstr + ","
