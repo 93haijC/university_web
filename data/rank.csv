@@ -1,0 +1,210 @@
+1,Princeton University,1
+2,Harvard University,2
+3,The University of Chicago,3
+4,Yale University,3
+5,Stanford University,5
+6,Columbia University in the City of New York,5
+7,Massachusetts Institute of Technology,7
+8,University of Pennsylvania,8
+9,Duke University,8
+10,Johns Hopkins University,10
+11,Dartmouth College,11
+12,California Institute of Technology,12
+13,Northwestern University,12
+14,Brown University,14
+15,Cornell University,15
+16,University of Notre Dame,15
+17,Vanderbilt University,15
+18,Rice University,15
+19,Washington University in St Louis,19
+20,University of California-Berkeley,20
+21,Emory University,20
+22,Georgetown University,20
+23,University of Southern California,23
+24,University of California-Los Angeles,24
+25,University of Virginia-Main Campus,24
+26,Carnegie Mellon University,24
+27,Tufts University,27
+28,University of Michigan-Ann Arbor,27
+29,Wake Forest University,27
+30,University of North Carolina at Chapel Hill,30
+31,Boston College,31
+32,University of Rochester,32
+33,College of William and Mary,32
+34,Georgia Institute of Technology-Main Campus,34
+35,Brandeis University,34
+36,New York University,36
+37,University of California-Santa Barbara,37
+38,Case Western Reserve University,37
+39,University of California Irvine,39
+40,Boston University,39
+41,Northeastern University,39
+42,Rensselaer Polytechnic Institute,39
+43,Tulane University of Louisiana,39
+44,University of California-San Diego,44
+45,University of California Davis,44
+46,University of Illinois at Urbana-Champaign,44
+47,University of Wisconsin-Madison,44
+48,University of Miami,44
+49,Lehigh University,44
+50,Pennsylvania State University-Main Campus,50
+51,University of Florida,50
+52,Pepperdine University,50
+53,Villanova University,50
+54,University of Washington-Seattle Campus,54
+55,Ohio State University-Main Campus,54
+56,The University of Texas at Austin,56
+57,George Washington University,56
+58,University of Georgia,56
+59,Southern Methodist University,56
+60,Purdue University-Main Campus ,60
+61,Syracuse University,60
+62,University of Connecticut,60
+63,University of Maryland-College Park,60
+64,Fordham University,60
+65,Worcester Polytechnic Institute,60
+66,Clemson University,66
+67,Yeshiva University,66
+68,University of Pittsburgh-Pittsburgh Campus,68
+69,Brigham Young University,68
+70,Rutgers University,70
+71,University of Minnesota-Twin Cities,71
+72,Baylor University,71
+73,Stevens Institute of Technology,71
+74,American University,74
+75,Virginia Polytechnic Institute and State University,74
+76,Texas A & M University,74
+77,University of Massachusetts Amherst,74
+78,Clark University,74
+79,University of California-Santa Cruz,79
+80,University of Delaware,79
+81,Miami University-Oxford,79
+82,Michigan State University,82
+83,University of Iowa,82
+84,Colorado School of Mines,82
+85,Texas Christian University,82
+86,University of San Diego,86
+87,Binghamton University,86
+88,Indiana University Bloomington,86
+89,University of Denver,86
+90,University of Tulsa,86
+91,Marquette University,86
+92,University of Colorado Boulder,92
+93,North Carolina State University at Raleigh,92
+94,Florida State University,92
+95,University of Vermont,92
+96,Saint Louis University-Main Campus,96
+97,Drexel University,96
+98,Stony Brook University,96
+99,The University of Alabama,96
+100,Auburn University,99
+101,University at Buffalo,99
+102,Loyola University Chicago,99
+103,SUNY College of Environmental Science and Forestry,99
+104,University of Nebraska Lincoln,103
+105,University of Missouri-Columbia,103
+106,University of Tennessee,103
+107,University of Oregon,103
+108,University of New Hampshire-Main Campus,103
+109,University of South Carolina,108
+110,University of the Pacific,108
+111,University of Oklahoma,108
+112,Iowa State University,108
+113,University of San Francisco,108
+114,Illinois Institute of Technology,108
+115,University of Dayton,108
+116,University of St Thomas,113
+117,University of Kansas,115
+118,Duquesne University,115
+119,Temple University,115
+120,University of St. Thomas-Minnesota,115
+121,University of Kansas International Program,115
+122,University of Utah,115
+123,Clarkson University,115
+124,University of California-Riverside,121
+125,DePaul University,123
+126,The Catholic University of America,123
+127,Michigan Technological University,123
+128,Seton Hall University,123
+129,Colorado State University,127
+130,The New School,127
+131,University of Illinois at Chicago,129
+132,Louisiana State University,129
+133,University of Kentucky,129
+134,Arizona State University,129
+135,University of Arizona,129
+136,University at Albany,129
+137,University of Arkansas,129
+138,Arizona State University,129
+139,Hofstra University,135
+140,Ohio University,135
+141,Oregon State University,135
+142,George Mason University,135
+143,Howard University,135
+144,Washington State University,140
+145,University of Mississippi Main Campus,140
+146,University of Cincinnati-Main Campus,140
+147,The University of Texas at Dallas,140
+148,New Jersey Institute of Technology,140
+149,Rutgers University-Newark,140
+150,Kansas State University,146
+151,Missouri University of Science and Technology,146
+152,St. John Fisher College,146
+153,San Diego State University,149
+154,Oklahoma State University-Main Campus,149
+155,University of Alabama at Birmingham,149
+156,Illinois State University,149
+157,University of Maryland--Baltimore,149
+158,Adelphi University,153
+159,St. John's University-New York,153
+160,Southern Illinois University Carbondale,153
+161,Virginia Commonwealth University,156
+162,University of South Florida-Main Campus,156
+163,University of Maryland-Baltimore County,156
+164,University of Massachusetts-Lowell,156
+165,University of La Verne,160
+166,Maryville University of Saint Louis,161
+167,University of Hawaii at Manoa,161
+168,Florida Institute of Technology,161
+169,University of Rhode Island,161
+170,Mississippi State University,161
+171,Biola University,161
+172,Immaculata University,161
+173,Texas Tech University,168
+174,University of Idaho,168
+175,University of Central Florida,168
+176,University of Wyoming,168
+177,Ball State University,168
+178,University of Louisville,168
+179,University of Maine,168
+180,Azusa Pacific University,175
+181,West Virginia University,175
+182,Andrews University,175
+183,Kent State University Kent Campus,175
+184,Edgewood College,175
+185,Pace University,180
+186,Saint Mary's University of Minnesota,180
+187,University of New Mexico-Main Campus,180
+188,University of South Dakota,180
+189,University of North Dakota,180
+190,Spalding University,181
+191,North Dakota State University,185
+192,Bowling Green State University,185
+193,"University of Nevada, Reno",187
+194,University of Alabama in Huntsville,187
+195,Western Michigan University,187
+196,University of Houston,187
+197,South Dakota State University,187
+198,University of North Carolina at Greensboro,187
+199,Widener University,187
+200,University of Missouri-Kansas City,194
+201,University of North Carolina at Charlotte,194
+202,Northern Illinois University,194
+203,Utah State University,194
+204,Central Michigan University,194
+205,East Carolina University,194
+206,South Carolina State University,194
+207,Indiana University-Purdue University-Indianapolis,199
+208,University of Colorado Denver,199
+209,Louisiana Tech University,199
+210,Ashland University,199

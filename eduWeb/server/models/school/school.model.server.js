@@ -90,7 +90,10 @@ module.exports = function() {
                         deferred.resolve(doc);
                     }
                 }
-            );} }
+            );} 
+
+        SchoolModel.find({}).sort({id:"asc"}); 
+        }
 
      //      SchoolModel
      //       // .findOne(
